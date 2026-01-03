@@ -14,8 +14,7 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#projects">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="menu-toggle" id="mobile-menu">
@@ -26,138 +25,118 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Tint Wai Yan Min (Andrew)</span></h1>
-            <h2>Full Stack Web Developer & System Analyst</h2>
-            <p>Specializing in React.js, Node.js, Python, and DevOps practices.</p>
-            <div class="social-links">
-                <a href="https://github.com/tintwym" target="_blank" rel="noopener noreferrer" title="Visit my GitHub profile"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/tint-wai-yan-min-a689b430b" target="_blank" rel="noopener noreferrer" title="Visit my LinkedIn profile"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:tintwaiyanmin.sg@gmail.com" title="Send me an email"><i class="fas fa-envelope"></i></a>
+        <div class="container hero-container">
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Profile" class="profile-img">
+                <div class="scribble-decoration"></div>
             </div>
-            
-            <div class="hero-buttons">
-                <a href="#projects" class="btn">View My Work</a>
-                <a href="resume.pdf" download="resume.pdf" class="btn btn-secondary">Download Resume <i class="fas fa-download"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <p class="about-text">
-            I am an NUS Graduate Diploma in Systems Analysis student with hands-on experience in full stack web development and system integration. 
-            I am skilled in React.js, Node.js, and Python, with a strong foundation in database management and DevOps practices. 
-            I am passionate about building scalable software solutions and contributing to digital transformation projects.
-        </p>
-
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Frontend</h3>
-                <p>React.js, HTML5, CSS3, JavaScript (ES6+), Bootstrap</p>
-            </div>
-            <div class="skill-category">
-                <h3>Backend</h3>
-                <p>Node.js, Express.js, RESTful APIs, JWT Auth</p>
-            </div>
-            <div class="skill-category">
-                <h3>Database</h3>
-                <p>PostgreSQL, Oracle SQL, MySQL</p>
-            </div>
-            <div class="skill-category">
-                <h3>DevOps & Tools</h3>
-                <p>Git, GitHub, AWS, Azure, CI/CD</p>
+            <div class="hero-text">
+                <p class="greeting">Hello, I'm</p>
+                <h1>Tint Wai Yan Min <br><span class="highlight">Andrew</span></h1>
+                <p class="subtitle">Full Stack Web Developer & <br>System Analyst.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">My Portfolio</a>
+                    <a href="resume.pdf" download="Tint_Wai_Yan_Min_Resume.pdf" class="btn btn-secondary"><i class="fas fa-play"></i> Resume</a>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>5+</h3>
+                        <p>Years Exp.</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Dedication</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="container bg-light">
-        <h2>Experience</h2>
-        
-        <div class="timeline-item">
-            <h3>Software Engineer Intern</h3>
-            <h4>SSMC, Singapore | March 2025 - July 2025</h4>
-            <ul>
-                <li>Improved data scalability by re-architecting ETL pipelines using modular Python and Shell services.</li>
-                <li>Enhanced integration efficiency between iSMRT and SAP ERP systems with optimized APIs.</li>
-                <li>Achieved faster deployment cycles by implementing automated CI/CD pipelines on AWS and Azure.</li>
-            </ul>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Full Stack Developer</h3>
-            <h4>Scala Communication, Myanmar | Jan 2020 - Dec 2023</h4>
-            <ul>
-                <li>Delivered 4+ full-stack web applications using React.js and Node.js, increasing system performance by 10%.</li>
-                <li>Boosted data reliability by 30% through automated backend testing and real-time monitoring scripts.</li>
-                <li>Mentored junior developers and led UI optimization that improved user retention.</li>
-            </ul>
+    <section id="about" class="section-grid-bg">
+        <div class="container about-container">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>I am an NUS Graduate Diploma in Systems Analysis student with hands-on experience in full stack web development. I love building scalable solutions that help businesses grow.</p>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Frontend</h3>
+                        <p>React.js, HTML5, CSS3</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend</h3>
+                        <p>Node.js, Express, Python</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h3>Database</h3>
+                        <p>SQL, MongoDB, AWS</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="projects" class="container">
-        <h2>Project Highlights</h2>
+        <div class="section-header">
+            <h2>Selected Works</h2>
+            <p>Check out some of my recent projects</p>
+        </div>
+        
         <div class="project-grid">
             <div class="project-card">
-                <h3>Shopping Cart</h3>
-                <p>An e-Commerce Web App.</p>
-                <div class="tags">
-                    <span>Java</span> <span>Spring Boot</span> <span>React JS</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>FitBiz</h3>
-                <p>Business Fitness Tracking System.</p>
-                <div class="tags">
-                    <span>Laravel</span> <span>PHP</span> <span>React JS</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>ORDX</h3>
-                <p>Health-care Survey System.</p>
-                <div class="tags">
-                    <span>Laravel</span> <span>PHP</span> <span>Node.js</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>MovieVerse</h3>
-                <p>Movie Database App.</p>
-                <div class="tags">
-                    <span>React</span> <span>Spring Boot</span> <span>Kotlin</span>
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <h3>Shopping Cart</h3>
+                    <p>e-Commerce Web App</p>
+                    <div class="tags">
+                        <span>Java</span> <span>React</span>
+                    </div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
              <div class="project-card">
-                <h3>ISMRT & ATMC ETL Split</h3>
-                <p>Data automation project.</p>
-                <div class="tags">
-                    <span>Python</span> <span>Shell</span>
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <h3>FitBiz</h3>
+                    <p>Fitness Tracking System</p>
+                    <div class="tags">
+                        <span>PHP</span> <span>Laravel</span>
+                    </div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <h3>MovieVerse</h3>
+                    <p>Movie Database App</p>
+                    <div class="tags">
+                        <span>React</span> <span>Kotlin</span>
+                    </div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="container bg-light">
-        <h2>Education</h2>
-        <div class="edu-item">
-            <h3>Graduate Diploma in System Analysis</h3>
-            <p>National University of Singapore (Aug 2024 - Feb 2025)</p>
-        </div>
-        <div class="edu-item">
-            <h3>Bachelor of Arts (English)</h3>
-            <p>Yadanabon University (Sep 2014 - Dec 2018)</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <footer>
-            <h2>Let's Connect</h2>
-            <p>Ready to collaborate on your next project?</p>
-            <a href="mailto:tintwaiyanmin.sg@gmail.com" class="btn">Send Email</a>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Tint Wai Yan Min. All rights reserved.</p>
+    <footer id="contact">
+        <div class="container">
+            <h2>Let's Work Together</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +65 9072 9943</p>
+                <p><i class="fas fa-envelope"></i> tintwaiyanmin.sg@gmail.com</p>
             </div>
-        </footer>
-    </section>
+            <div class="social-links">
+                <a href="https://github.com/tintwym" title="GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Tint Wai Yan Min.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
