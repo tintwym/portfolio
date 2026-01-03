@@ -106,6 +106,33 @@ html {
     color: var(--accent-color);
 }
 
+/* --- NEW: Hero Button Container & Secondary Button --- */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    /* Inherit base button styles */
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: var(--accent-color);
+    color: var(--white);
+}
+/* ---------------------------------------------------- */
+
 /* Common Layout */
 .container {
     padding: 4rem 2rem;
@@ -219,7 +246,7 @@ section h2 {
     margin-bottom: 5px;
 }
 
-/* Button */
+/* Primary Button (Standard) */
 .btn {
     display: inline-block;
     background: var(--accent-color);
@@ -227,7 +254,6 @@ section h2 {
     padding: 10px 25px;
     border-radius: 25px;
     text-decoration: none;
-    margin-top: 10px;
     transition: background 0.3s;
 }
 
