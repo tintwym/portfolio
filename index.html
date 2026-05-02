@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="shortcut icon" href="favicon.svg">
     <title>Tint Wai Yan Min — Portfolio</title>
     <meta name="description" content="Tint Wai Yan Min (Andrew) — backend and full-stack developer in Singapore. NUS Graduate Diploma in Systems Analysis. Java, Spring Boot, React, Kotlin, Laravel. CV, projects, and contact.">
     <meta property="og:title" content="Tint Wai Yan Min — Portfolio">
     <meta property="og:description" content="Backend & full-stack developer — Java, Spring Boot, React, Laravel. Graduate Diploma in Systems Analysis (NUS).">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="style.css?v=5">
+    <meta name="theme-color" content="#006D5B">
+    <link rel="stylesheet" href="style.css?v=10">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar" aria-label="Main navigation">
-        <div class="logo"><a href="#home">Tint Wai Yan Min</a></div>
+        <div class="logo"><a href="#home" id="brand-home-link">Tint Wai Yan Min</a></div>
         <ul class="nav-links" id="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" id="home-link">Home</a></li>
+            <li><a href="#about" id="about-link">About</a></li>
+            <li><a href="#projects" id="portfolio-link">Portfolio</a></li>
+            <li><a href="#contact" id="contact-link">Contact</a></li>
         </ul>
         <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
             <span class="bar" aria-hidden="true"></span>
@@ -40,7 +43,7 @@
                 <h1>Tint Wai Yan Min <br><span class="highlight">Andrew</span></h1>
                 <p class="subtitle">Junior Backend Developer · Full stack &amp; systems background</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn">My Portfolio</a>
+                    <a href="#projects" class="btn" id="portfolio-cta-link">My Portfolio</a>
                     <a href="Junior%20Backend%20Developer.pdf" download="Tint_Wai_Yan_Min_CV.pdf" class="btn btn-secondary"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV</a>
                 </div>
                 
@@ -120,7 +123,9 @@
                 </div>
             </div>
             <div class="project-card">
-                <div class="card-image card-image--movies" aria-hidden="true"></div>
+                <div class="card-image card-image--movies card-image--logo" aria-hidden="true">
+                    <img src="images/movieverse-logo.svg" alt="" class="project-card-logo" width="200" height="200" decoding="async">
+                </div>
                 <div class="card-content">
                     <h3>MovieVerse</h3>
                     <p>Movie database &amp; discovery</p>
