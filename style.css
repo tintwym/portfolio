@@ -23,6 +23,11 @@ body {
     color: var(--text-dark);
     font-family: 'DM Sans', sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body.nav-open {
+    overflow: hidden;
 }
 
 /* TYPOGRAPHY */
@@ -38,12 +43,70 @@ h1, h2, h3 {
     align-items: center;
     padding: 1.5rem 5%;
     background: transparent; /* See-through to show grid */
+    position: relative;
+    z-index: 200;
+    gap: 1rem;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--green-dark);
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo a:focus-visible {
+    outline: 2px solid var(--green-dark);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* Hamburger: hidden on desktop */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--green-dark);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--green-dark);
+    outline-offset: 2px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: var(--green-dark);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle.is-open .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.is-open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-open .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
 }
 
 .nav-links {
@@ -57,6 +120,14 @@ h1, h2, h3 {
     color: var(--text-dark);
     font-weight: 500;
     font-size: 1.1rem;
+    display: inline-block;
+    padding: 0.35rem 0;
+}
+
+.nav-links a:focus-visible {
+    outline: 2px solid var(--green-dark);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 /* GRID BACKGROUND EFFECT */
@@ -94,8 +165,10 @@ h1, h2, h3 {
 }
 
 .profile-img {
-    width: 350px;
-    height: 350px;
+    width: min(350px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+    max-width: 350px;
     object-fit: cover;
     /* This creates the organic "blob" shape */
     border-radius: 45% 55% 70% 30% / 30% 30% 70% 70%;
@@ -106,19 +179,20 @@ h1, h2, h3 {
 /* The "Scribble" behind the image (simulated with CSS) */
 .scribble-decoration {
     position: absolute;
-    width: 380px;
-    height: 380px;
+    width: min(380px, calc(100% + 40px));
+    height: min(380px, calc(100% + 40px));
     border: 2px dashed var(--green-dark);
     border-radius: 50%;
-    top: -15px;
-    right: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
-    animation: rotate 20s infinite linear;
+    animation: scribble-orbit 20s infinite linear;
 }
 
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+@keyframes scribble-orbit {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .hero-text {
@@ -132,7 +206,7 @@ h1, h2, h3 {
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
     line-height: 1.1;
     margin-bottom: 20px;
 }
@@ -174,6 +248,11 @@ h1, h2, h3 {
 
 .btn:hover {
     transform: translateY(-3px);
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--green-dark);
+    outline-offset: 3px;
 }
 
 /* STATS (at bottom of hero) */
@@ -286,13 +365,14 @@ footer {
 }
 
 footer h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     margin-bottom: 30px;
 }
 
 .contact-info p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin: 10px 0;
+    word-break: break-word;
 }
 
 .social-links {
@@ -307,24 +387,113 @@ footer h2 {
 
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
+    .navbar {
+        flex-wrap: nowrap;
+        align-items: center;
     }
-    
-    .hero-image-wrapper {
-        margin-bottom: 40px;
+
+    .menu-toggle {
+        display: flex;
+        order: 2;
     }
-    
-    .hero-buttons {
-        justify-content: center;
-    }
-    
-    .stats {
-        justify-content: center;
+
+    .logo {
+        order: 0;
     }
 
     .nav-links {
-        display: none; /* Hide nav on mobile for now (requires JS toggle) */
+        display: none;
+        order: 3;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--bg-cream);
+        padding: 0.75rem 1.25rem 1.25rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border-bottom: 1px solid var(--grid-line);
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid rgba(0, 109, 91, 0.12);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        padding: 0.85rem 0.5rem;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 1rem 5% 3rem;
+        align-items: flex-start;
+    }
+
+    .hero .container {
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-image-wrapper {
+        margin-bottom: 0;
+        max-width: 100%;
+    }
+
+    .profile-img {
+        max-width: min(280px, 88vw);
+    }
+
+    .scribble-decoration {
+        width: min(310px, 92vw);
+        height: min(310px, 92vw);
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }

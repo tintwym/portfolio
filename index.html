@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tint Wai Yan Min - Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Andrew.Dev</div>
-        <ul class="nav-links">
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo"><a href="#home">Andrew.Dev</a></div>
+        <ul class="nav-links" id="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+        <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+        </button>
     </nav>
 
     <section id="home" class="hero">
@@ -33,10 +33,10 @@
             <div class="hero-text">
                 <p class="greeting">Hello, I'm</p>
                 <h1>Tint Wai Yan Min <br><span class="highlight">Andrew</span></h1>
-                <p class="subtitle">Full Stack Web Developer & <br>System Analyst.</p>
+                <p class="subtitle">Junior Backend Developer · Full stack &amp; systems background</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn">My Portfolio</a>
-                    <a href="resume.pdf" download="Tint_Wai_Yan_Min_Resume.pdf" class="btn btn-secondary"><i class="fas fa-play"></i> Resume</a>
+                    <a href="Junior%20Backend%20Developer.pdf" download="Tint_Wai_Yan_Min_CV.pdf" class="btn btn-secondary"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV</a>
                 </div>
                 
                 <div class="stats">
@@ -131,8 +131,8 @@
                 <p><i class="fas fa-envelope"></i> tintwaiyanmin.sg@gmail.com</p>
             </div>
             <div class="social-links">
-                <a href="https://github.com/tintwym" title="GitHub Profile"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/tintwym" title="GitHub" rel="noopener noreferrer" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com" title="LinkedIn" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
             </div>
             <p class="copyright">&copy; 2026 Tint Wai Yan Min.</p>
         </div>
