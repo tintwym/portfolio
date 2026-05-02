@@ -345,126 +345,27 @@ h1, h2, h3 {
     height: 100%;
 }
 
-/* Device-style previews (closer to realistic portfolio mockups) */
-.project-mockup {
+/* Project cover art: local SVG isometric illustrations */
+.project-card-visual {
     flex-shrink: 0;
-    background: linear-gradient(168deg, #eceae7 0%, #e0ddd8 42%, #d4d0ca 100%);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.045);
-}
-
-.project-mockup--laptop {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 1.35rem 1rem 0.85rem;
-}
-
-.mockup-screen-wrap {
-    position: relative;
-    width: min(100%, 340px);
-    padding: 10px 10px 0;
-    border-radius: 12px 12px 0 0;
-    background: linear-gradient(160deg, #3a3a3a 0%, #1a1a1a 100%);
-    box-shadow:
-        0 0 0 1px rgba(255, 255, 255, 0.07) inset,
-        0 18px 42px rgba(0, 0, 0, 0.2);
-}
-
-.mockup-screen-wrap .mockup-shot {
-    display: block;
-    width: 100%;
-    height: 172px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 4px 4px 0 0;
-}
-
-.mockup-glare {
-    pointer-events: none;
-    position: absolute;
-    inset: 0;
-    border-radius: 12px 12px 0 0;
-    background: linear-gradient(118deg, rgba(255, 255, 255, 0.22) 0%, transparent 45%);
-    z-index: 1;
-}
-
-.mockup-glare--subtle {
-    opacity: 0.5;
-}
-
-.mockup-laptop-base {
-    margin-top: -2px;
-    width: min(78%, 268px);
-    height: 10px;
-    border-radius: 0 0 22px 22px;
-    background: linear-gradient(180deg, #c8c4be 0%, #aaa59e 100%);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
-}
-
-.project-mockup--tablet {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 1.45rem 1.2rem 1.15rem;
+    margin: 0;
+    padding: 0.85rem 0.65rem 1rem;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    background-color: #ebe8e4;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.mockup-tablet-frame {
-    position: relative;
-    width: min(94%, 330px);
-    padding: 11px;
-    border-radius: 16px;
-    background: linear-gradient(150deg, #2f2f2f, #141414);
-    box-shadow:
-        0 0 0 1px rgba(255, 255, 255, 0.06) inset,
-        0 16px 38px rgba(0, 0, 0, 0.18);
-}
-
-.mockup-tablet-frame .mockup-shot {
+.project-card-visual-img {
     display: block;
     width: 100%;
-    height: 182px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 9px;
-}
-
-.project-mockup--phone {
-    display: flex;
-    justify-content: center;
-    padding: 1.55rem 1rem 1.2rem;
-}
-
-.mockup-phone-frame {
-    position: relative;
-    width: min(46%, 140px);
-    min-width: 108px;
-    padding: 11px 9px 13px;
-    border-radius: 28px;
-    background: linear-gradient(165deg, #303030, #0c0c0c);
-    box-shadow:
-        0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-        0 20px 46px rgba(0, 0, 0, 0.24);
-}
-
-.mockup-phone-notch {
-    position: absolute;
-    top: 7px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 46px;
-    height: 5px;
-    background: #080808;
-    border-radius: 999px;
-    z-index: 2;
-}
-
-.mockup-shot--phone {
-    display: block;
-    width: 100%;
-    height: 204px;
-    object-fit: cover;
-    object-position: center center;
-    border-radius: 19px;
+    max-width: 420px;
+    height: auto;
+    aspect-ratio: 690 / 390;
 }
 
 .card-content {
@@ -659,18 +560,6 @@ footer h2 {
 
     .project-grid {
         grid-template-columns: 1fr;
-    }
-
-    .mockup-screen-wrap .mockup-shot {
-        height: 156px;
-    }
-
-    .mockup-tablet-frame .mockup-shot {
-        height: 164px;
-    }
-
-    .mockup-shot--phone {
-        height: 188px;
     }
 
     .skills-grid {
