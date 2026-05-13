@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+        yearEl.textContent = String(new Date().getFullYear());
+    }
+
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.getElementById('nav-menu');
 
@@ -11,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('nav-open', open);
     };
 
-    /* Friend's pattern: id on each header anchor, preventDefault + scrollIntoView({ behavior: 'smooth' }). */
     const wireSmoothLink = (linkId) => {
         const link = document.getElementById(linkId);
         if (!link) return;
@@ -44,10 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     [
         'brand-home-link',
-        'home-link',
-        'about-link',
-        'portfolio-link',
+        'work-link',
+        'skills-link',
         'contact-link',
+        'hire-link',
         'portfolio-cta-link',
     ].forEach(wireSmoothLink);
 
@@ -70,6 +74,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.classList.remove('active');
                 syncMenuState();
             }
+        });
+    }
+
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.alert(
+                'Thanks for your message. This form is a demo on the static site — email tintwaiyanmin.sg@gmail.com or use LinkedIn for a real response. You can connect the form to Formspree, Netlify Forms, or EmailJS when you host it.'
+            );
+        });
+    }
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            },
+            { threshold: 0.08 }
+        );
+
+        document.querySelectorAll('.project-card, .skill-category, .resume-highlight').forEach((el) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
         });
     }
 });
