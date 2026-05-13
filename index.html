@@ -5,27 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
     <link rel="shortcut icon" href="favicon.svg">
-    <title>Tint Wai Yan Min — Portfolio</title>
-    <meta name="description" content="Tint Wai Yan Min (Andrew) — backend and full-stack developer in Singapore. NUS Graduate Diploma in Systems Analysis. Java, Spring Boot, React, Kotlin, Laravel. CV, projects, and contact.">
+    <title>Tint Wai Yan Min (Andrew) — Backend &amp; Full-Stack Developer | Singapore</title>
+    <meta name="description" content="Tint Wai Yan Min (Andrew) — junior backend and full-stack developer in Singapore. NUS Graduate Diploma in Systems Analysis. Java, Spring Boot, React, Laravel, Kotlin, APIs. Download CV, view projects, and connect.">
     <meta property="og:title" content="Tint Wai Yan Min — Portfolio">
-    <meta property="og:description" content="Backend & full-stack developer — Java, Spring Boot, React, Laravel. Graduate Diploma in Systems Analysis (NUS).">
+    <meta property="og:description" content="Backend and full-stack engineer focused on scalable APIs, React experiences, and cloud-ready delivery. Open to opportunities in Singapore.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#0c0c0c">
-    <link rel="stylesheet" href="style.css?v=19">
+    <meta name="theme-color" content="#2a4a6e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
+    <link rel="stylesheet" href="style.css?v=26">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <nav class="site-nav" aria-label="Main navigation">
     <a href="#home" class="nav-logo" id="brand-home-link">Tint Wai Yan Min</a>
     <ul class="nav-links" id="nav-menu">
-        <li><a href="#work" id="work-link">Work</a></li>
-        <li><a href="#skills" id="skills-link">Skills</a></li>
-        <li><a href="#contact" id="contact-link">Contact</a></li>
+        <li><a href="#about" id="nav-about">About</a></li>
+        <li><a href="#experience" id="nav-experience">Experience</a></li>
+        <li><a href="#education" id="nav-education">Education</a></li>
+        <li><a href="#skills" id="nav-skills">Skills</a></li>
+        <li><a href="#projects" id="nav-projects">Projects</a></li>
+        <li><a href="#contact" id="nav-contact">Contact</a></li>
     </ul>
     <div class="nav-actions">
-        <a href="#contact" class="btn btn-primary nav-hire" id="hire-link">Hire Me</a>
+        <a href="#contact" class="btn btn-primary nav-cta" id="hire-link">Contact me</a>
         <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
             <span class="bar" aria-hidden="true"></span>
             <span class="bar" aria-hidden="true"></span>
@@ -34,236 +42,345 @@
     </div>
 </nav>
 
-<header class="hero" id="home">
-    <div class="hero-text">
-        <p class="hero-eyebrow">Open to opportunities · Singapore</p>
-        <h1 class="hero-name">Tint Wai Yan Min<br/><em>Andrew</em></h1>
-        <p class="hero-title">Junior Backend Developer · Full stack &amp; systems</p>
-        <p class="hero-bio">
-            NUS Graduate Diploma in Systems Analysis student with hands-on experience in full-stack web development.
-            I enjoy building scalable solutions — Java &amp; Spring Boot, React, Laravel, and cloud-ready APIs.
-        </p>
-        <div class="hero-cta">
-            <a href="#work" class="btn btn-primary" id="portfolio-cta-link">View My Work</a>
-            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-        </div>
-        <div class="hero-stats">
-            <div>
-                <div class="stat-num">4+</div>
-                <div class="stat-label">Years Experience</div>
-            </div>
-            <div>
-                <div class="stat-num">100%</div>
-                <div class="stat-label">Dedication</div>
-            </div>
-            <div>
-                <div class="stat-num">3</div>
-                <div class="stat-label">Featured Builds</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="hero-image">
-        <div class="hero-image-frame">
-            <img src="images/profile.png" width="1024" height="1024" alt="Tint Wai Yan Min (Andrew), professional portrait" class="hero-profile-img" fetchpriority="high">
-        </div>
-    </div>
-</header>
-
-<section id="work">
-    <div class="section-header">
-        <p class="section-num">01 — Selected Work</p>
-        <h2 class="section-title">Projects I'm<br/><em>Proud Of</em></h2>
-    </div>
-
-    <div class="projects-grid">
-        <a class="project-card" href="https://github.com/tintwym/shopping-cart-backend" rel="noopener noreferrer" target="_blank">
-            <div class="project-card-visual">
-                <img class="project-card-visual-img" src="images/shopping-cart-isometric.svg?v=3" width="690" height="390" alt="" loading="lazy" decoding="async">
-            </div>
-            <span class="project-tag">Java · React · e‑Commerce</span>
-            <h3 class="project-name">Shopping Cart</h3>
-            <p class="project-desc">
-                Team project — Java APIs and services integrated with a React storefront for an e‑commerce web app.
-            </p>
-            <div class="project-footer">
-                <span class="project-year">GitHub</span>
-                <div class="project-arrow" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-                    </svg>
+<main id="main-content" tabindex="-1">
+    <header class="hero" id="home">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-eyebrow">Open to opportunities · Singapore</p>
+                <h1 class="hero-name">Tint Wai Yan Min</h1>
+                <p class="hero-name-note">Known professionally as <em>Andrew</em></p>
+                <p class="hero-title">Junior Full-Stack Developer · Backend &amp; systems</p>
+                <p class="hero-tagline">
+                    I design and ship reliable APIs and product-facing experiences—pairing Java &amp; Spring Boot, PHP &amp; Laravel, and modern React—with clear documentation and measurable outcomes for users and teams.
+                </p>
+                <div class="hero-cta">
+                    <a href="Junior%20Backend%20Developer.pdf" class="btn btn-primary" download="Tint_Wai_Yan_Min_CV.pdf" id="hero-cv-link">
+                        <i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" id="hero-contact-link">Contact me</a>
+                    <a href="#projects" class="btn btn-ghost" id="hero-projects-link">View projects</a>
                 </div>
+                <dl class="hero-stats" aria-label="Career highlights">
+                    <div class="hero-stat">
+                        <dt class="stat-num">4+</dt>
+                        <dd class="stat-label">Years building software</dd>
+                    </div>
+                    <div class="hero-stat">
+                        <dt class="stat-num">3</dt>
+                        <dd class="stat-label">Featured repositories</dd>
+                    </div>
+                    <div class="hero-stat">
+                        <dt class="stat-num">Full-stack</dt>
+                        <dd class="stat-label">APIs to React delivery</dd>
+                    </div>
+                </dl>
             </div>
-        </a>
-
-        <a class="project-card" href="https://github.com/tintwym/home_mart" rel="noopener noreferrer" target="_blank">
-            <div class="project-card-visual">
-                <img class="project-card-visual-img" src="images/home-mart-isometric.svg?v=3" width="690" height="390" alt="" loading="lazy" decoding="async">
-            </div>
-            <span class="project-tag">Laravel · React · PHP</span>
-            <h3 class="project-name">Home Mart</h3>
-            <p class="project-desc">
-                Team project — full-stack e‑commerce features with Laravel and React.
-            </p>
-            <div class="project-footer">
-                <span class="project-year">GitHub</span>
-                <div class="project-arrow" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-                    </svg>
-                </div>
-            </div>
-        </a>
-
-        <a class="project-card" href="https://github.com/tintwym/movie_verse_backend" rel="noopener noreferrer" target="_blank">
-            <div class="project-card-visual">
-                <img class="project-card-visual-img" src="images/movieverse-isometric.svg?v=3" width="690" height="390" alt="" loading="lazy" decoding="async">
-            </div>
-            <span class="project-tag">Spring Boot · Kotlin · Python · React</span>
-            <h3 class="project-name">MovieVerse</h3>
-            <p class="project-desc">
-                Team project — Spring Boot services; worked with Kotlin, Python, and front-end repositories for movie discovery.
-            </p>
-            <div class="project-footer">
-                <span class="project-year">GitHub</span>
-                <div class="project-arrow" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-                    </svg>
-                </div>
-            </div>
-        </a>
-    </div>
-</section>
-
-<section id="skills">
-    <div class="section-header">
-        <p class="section-num">02 — Skills &amp; Experience</p>
-        <h2 class="section-title">What I<br/><em>Bring to the Table</em></h2>
-    </div>
-
-    <div class="skills-layout">
-        <div>
-            <div class="skill-category">
-                <div class="skill-cat-name">Languages &amp; frameworks</div>
-                <div class="skill-item">
-                    <span class="skill-name">Java / Spring Boot</span>
-                    <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:88%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">React / TypeScript</span>
-                    <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:82%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Kotlin / Python / PHP</span>
-                    <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:76%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Node.js / Laravel</span>
-                    <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:74%"></div></div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-cat-name">Data &amp; platform</div>
-                <div class="skill-item">
-                    <span class="skill-name">SQL / MySQL / PostgreSQL</span>
-                    <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:84%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Git / Docker / AWS</span>
-                    <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:70%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Agile / Scrum</span>
-                    <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:85%"></div></div>
+            <div class="hero-image">
+                <div class="hero-image-frame">
+                    <img src="images/profile.png" width="1024" height="1024" alt="Tint Wai Yan Min (Andrew), professional headshot" class="hero-profile-img" fetchpriority="high">
                 </div>
             </div>
         </div>
+    </header>
 
-        <div>
-            <div class="resume-highlight">
-                <div class="skill-cat-name" style="margin-bottom:1.25rem;">Background</div>
-
-                <div class="timeline-item">
-                    <div class="timeline-role">Graduate Diploma, Systems Analysis</div>
-                    <div class="timeline-company">National University of Singapore</div>
-                    <div class="timeline-date">In progress — full-stack &amp; systems focus</div>
+    <section id="about" class="section section-about" aria-labelledby="about-heading">
+        <div class="section-inner">
+            <header class="section-header">
+                <p class="section-kicker">About</p>
+                <h2 id="about-heading" class="section-title">Professional summary</h2>
+            </header>
+            <div class="about-grid reveal">
+                <div class="card card-about">
+                    <h3 class="card-title">Who I am</h3>
+                    <p>
+                        Graduate Diploma candidate in Systems Analysis at the National University of Singapore, with a track record of delivering full-stack features in agile, cross-functional teams. I translate business goals into maintainable services, integration contracts, and polished user interfaces.
+                    </p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-role">Team projects — backend &amp; integration</div>
-                    <div class="timeline-company">Shopping Cart · Home Mart · MovieVerse</div>
-                    <div class="timeline-date">Java APIs, Laravel, Spring Boot, React</div>
+                <div class="card card-about">
+                    <h3 class="card-title">Career focus</h3>
+                    <p>
+                        Backend engineering (REST APIs, authentication, persistence), service integration, and React-based front ends. I care about testability, observability-friendly design, and documentation that helps the next developer move faster.
+                    </p>
                 </div>
-                <div class="timeline-item" style="border-bottom:none;">
-                    <div class="timeline-role">Building scalable solutions</div>
-                    <div class="timeline-company">Interests</div>
-                    <div class="timeline-date">Clean architecture, APIs, growth-minded teams</div>
+                <div class="card card-about">
+                    <h3 class="card-title">Core strengths</h3>
+                    <ul class="list-check">
+                        <li>End-to-end ownership from schema to UI states</li>
+                        <li>Collaborative delivery with Git-based workflows</li>
+                        <li>Clear written communication for stakeholders</li>
+                    </ul>
                 </div>
-
-                <a href="Junior%20Backend%20Developer.pdf" download="Tint_Wai_Yan_Min_CV.pdf" class="btn btn-ghost resume-download">
-                    <i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV
-                </a>
+                <div class="card card-about">
+                    <h3 class="card-title">Industry expertise</h3>
+                    <p>
+                        E-commerce and content-discovery domains through academic and team projects—catalog and cart flows, checkout integrations, and discovery experiences backed by Spring Boot and Laravel services.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="contact">
-    <div class="contact-layout">
-        <div class="contact-info">
-            <p class="section-num">03 — Contact</p>
-            <h2 class="contact-headline">Let's Build<br/>Something Great</h2>
-            <p class="contact-subtext">
-                Whether you have a role, a project, or a question — reach out. I typically reply within a day or two.
-            </p>
-            <div class="contact-links">
-                <a href="tel:+6590729943" class="contact-link">
-                    <span class="contact-link-icon" aria-hidden="true"><i class="fas fa-phone"></i></span>
-                    +65 9072 9943
-                </a>
-                <a href="mailto:tintwaiyanmin.sg@gmail.com" class="contact-link">
-                    <span class="contact-link-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
-                    tintwaiyanmin.sg@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/tint-wai-yan-min-a689b430b/" class="contact-link" rel="noopener noreferrer" target="_blank">
-                    <span class="contact-link-icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></span>
-                    LinkedIn profile
-                </a>
-                <a href="https://github.com/tintwym" class="contact-link" rel="noopener noreferrer" target="_blank">
-                    <span class="contact-link-icon" aria-hidden="true"><i class="fab fa-github"></i></span>
-                    github.com/tintwym
-                </a>
+    <section id="experience" class="section section-alt" aria-labelledby="experience-heading">
+        <div class="section-inner">
+            <header class="section-header">
+                <p class="section-kicker">Experience</p>
+                <h2 id="experience-heading" class="section-title">Selected delivery experience</h2>
+                <p class="section-lead">Highlights aligned to recruiter and ATS scanning—full employment history on the downloadable CV.</p>
+            </header>
+            <div class="experience-list">
+                <article class="card card-experience reveal">
+                    <header class="experience-card-head">
+                        <div>
+                            <h3 class="experience-title">Software engineer — team &amp; project delivery</h3>
+                            <p class="experience-meta">National University of Singapore · Collaborative cohort projects</p>
+                        </div>
+                        <p class="experience-period"><time datetime="2023">2023</time> – Present</p>
+                    </header>
+                    <ul class="experience-bullets">
+                        <li><strong>Scope:</strong> Designed and implemented REST APIs, persistence layers, and React experiences for multi-repository e-commerce and discovery platforms.</li>
+                        <li><strong>Impact:</strong> Reduced integration ambiguity by documenting endpoints, payloads, and error contracts for cross-team consumers.</li>
+                        <li><strong>Stack:</strong> Java &amp; Spring Boot, Laravel &amp; PHP, React &amp; TypeScript, Kotlin &amp; Python (supporting services), SQL databases, Git &amp; Docker.</li>
+                    </ul>
+                </article>
+                <article class="card card-experience reveal">
+                    <header class="experience-card-head">
+                        <div>
+                            <h3 class="experience-title">Full-stack engineer — showcase projects</h3>
+                            <p class="experience-meta">Shopping Cart · Home Mart · MovieVerse (GitHub)</p>
+                        </div>
+                        <p class="experience-period">Milestone releases</p>
+                    </header>
+                    <ul class="experience-bullets">
+                        <li><strong>Shopping Cart:</strong> Built Java services consumed by a React storefront; improved reliability of cart and catalog flows through structured error handling.</li>
+                        <li><strong>Home Mart:</strong> Delivered Laravel and React modules for catalog, checkout-adjacent features, and admin workflows.</li>
+                        <li><strong>MovieVerse:</strong> Contributed Spring Boot services and aligned with Kotlin and Python services plus React discovery UI across repositories.</li>
+                    </ul>
+                </article>
             </div>
         </div>
+    </section>
 
-        <div>
-            <form class="contact-form" id="contact-form">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Role or project inquiry">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Tell me about your opportunity…" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary contact-submit">Send Message →</button>
-            </form>
+    <section id="education" class="section" aria-labelledby="education-heading">
+        <div class="section-inner">
+            <header class="section-header">
+                <p class="section-kicker">Education</p>
+                <h2 id="education-heading" class="section-title">Academic credentials</h2>
+            </header>
+            <div class="education-grid reveal">
+                <article class="card card-education">
+                    <h3 class="education-degree">Graduate Diploma, Systems Analysis</h3>
+                    <p class="education-school">National University of Singapore</p>
+                    <p class="education-detail">In progress — full-stack engineering, systems design, and agile delivery.</p>
+                </article>
+                <article class="card card-education">
+                    <h3 class="education-degree">Certifications &amp; continuing education</h3>
+                    <p class="education-school">See CV for dated credentials</p>
+                    <p class="education-detail">Formal certifications and dated credentials (cloud, security, agile) are listed on my CV.</p>
+                </article>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer>
+    <section id="skills" class="section section-tint" aria-labelledby="skills-heading">
+        <div class="section-inner">
+            <header class="section-header">
+                <p class="section-kicker">Skills</p>
+                <h2 id="skills-heading" class="section-title">Capability map</h2>
+                <p class="section-lead">Grouped for quick scanning—keywords mirror common ATS taxonomies.</p>
+            </header>
+            <div class="skills-matrix reveal">
+                <div class="card card-skill-group">
+                    <h3 class="skill-group-title">Business skills</h3>
+                    <ul class="skill-chips">
+                        <li>Requirements clarification</li>
+                        <li>Agile / Scrum ceremonies</li>
+                        <li>Stakeholder updates</li>
+                        <li>Technical documentation</li>
+                        <li>Release coordination</li>
+                    </ul>
+                </div>
+                <div class="card card-skill-group">
+                    <h3 class="skill-group-title">Technical skills</h3>
+                    <ul class="skill-chips">
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                        <li>Kotlin</li>
+                        <li>Python</li>
+                        <li>PHP</li>
+                        <li>Laravel</li>
+                        <li>React</li>
+                        <li>TypeScript</li>
+                        <li>Node.js</li>
+                        <li>REST APIs</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="card card-skill-group">
+                    <h3 class="skill-group-title">Tools &amp; platforms</h3>
+                    <ul class="skill-chips">
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Docker</li>
+                        <li>AWS (foundational)</li>
+                        <li>MySQL / PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="card card-skill-group">
+                    <h3 class="skill-group-title">Languages</h3>
+                    <ul class="skill-chips">
+                        <li>English — professional working proficiency</li>
+                    </ul>
+                </div>
+                <div class="card card-skill-group card-skill-wide">
+                    <h3 class="skill-group-title">Leadership &amp; soft skills</h3>
+                    <ul class="skill-chips">
+                        <li>Cross-functional collaboration</li>
+                        <li>Peer code review</li>
+                        <li>Constructive feedback</li>
+                        <li>Ownership mindset</li>
+                        <li>Continuous learning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section section-alt" aria-labelledby="projects-heading">
+        <div class="section-inner">
+            <header class="section-header">
+                <p class="section-kicker">Projects</p>
+                <h2 id="projects-heading" class="section-title">Achievements &amp; outcomes</h2>
+            </header>
+            <div class="projects-grid">
+                <article class="card card-project reveal">
+                    <div class="project-visual">
+                        <img src="images/shopping-cart-isometric.svg?v=3" width="690" height="390" alt="Isometric illustration: Shopping Cart e-commerce project" loading="lazy" decoding="async">
+                    </div>
+                    <span class="project-tag">Java · Spring Boot · React · E-commerce</span>
+                    <h3 class="project-name">Shopping Cart</h3>
+                    <dl class="project-parts">
+                        <div>
+                            <dt>Problem</dt>
+                            <dd>Team needed a dependable commerce backbone with a modern storefront experience.</dd>
+                        </div>
+                        <div>
+                            <dt>Actions</dt>
+                            <dd>Implemented Java APIs and services; integrated with a React client for catalog and cart journeys.</dd>
+                        </div>
+                        <div>
+                            <dt>Outcomes</dt>
+                            <dd>Demonstrable full-stack slice with clearer service boundaries for future scaling.</dd>
+                        </div>
+                    </dl>
+                    <a class="btn btn-secondary btn-block" href="https://github.com/tintwym/shopping-cart-backend" rel="noopener noreferrer" target="_blank">View on GitHub</a>
+                </article>
+
+                <article class="card card-project reveal">
+                    <div class="project-visual">
+                        <img src="images/home-mart-isometric.svg?v=3" width="690" height="390" alt="Isometric illustration: Home Mart e-commerce project" loading="lazy" decoding="async">
+                    </div>
+                    <span class="project-tag">Laravel · React · PHP</span>
+                    <h3 class="project-name">Home Mart</h3>
+                    <dl class="project-parts">
+                        <div>
+                            <dt>Problem</dt>
+                            <dd>Deliver a cohesive e-commerce experience across admin, catalog, and customer flows.</dd>
+                        </div>
+                        <div>
+                            <dt>Actions</dt>
+                            <dd>Built Laravel-backed features with React surfaces for interactive merchandising scenarios.</dd>
+                        </div>
+                        <div>
+                            <dt>Outcomes</dt>
+                            <dd>End-to-end features suitable for portfolio review and technical interviews.</dd>
+                        </div>
+                    </dl>
+                    <a class="btn btn-secondary btn-block" href="https://github.com/tintwym/home_mart" rel="noopener noreferrer" target="_blank">View on GitHub</a>
+                </article>
+
+                <article class="card card-project reveal">
+                    <div class="project-visual">
+                        <img src="images/movieverse-isometric.svg?v=3" width="690" height="390" alt="Isometric illustration: MovieVerse discovery project" loading="lazy" decoding="async">
+                    </div>
+                    <span class="project-tag">Spring Boot · Kotlin · Python · React</span>
+                    <h3 class="project-name">MovieVerse</h3>
+                    <dl class="project-parts">
+                        <div>
+                            <dt>Problem</dt>
+                            <dd>Discovery experience spanning multiple services and languages needed consistent contracts.</dd>
+                        </div>
+                        <div>
+                            <dt>Actions</dt>
+                            <dd>Contributed Spring Boot services; coordinated with Kotlin and Python components and React clients.</dd>
+                        </div>
+                        <div>
+                            <dt>Outcomes</dt>
+                            <dd>Showcases polyglot integration skills valued in modern platform teams.</dd>
+                        </div>
+                    </dl>
+                    <a class="btn btn-secondary btn-block" href="https://github.com/tintwym/movie_verse_backend" rel="noopener noreferrer" target="_blank">View on GitHub</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
+        <div class="section-inner">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <p class="section-kicker">Contact</p>
+                    <h2 id="contact-heading" class="section-title">Let's build something reliable</h2>
+                    <p class="contact-subtext">
+                        For roles, collaborations, or technical questions—reach out by email or LinkedIn. I typically respond within one to two business days.
+                    </p>
+                    <div class="contact-links">
+                        <a href="tel:+6590729943" class="contact-link">
+                            <span class="contact-link-icon" aria-hidden="true"><i class="fas fa-phone"></i></span>
+                            +65 9072 9943
+                        </a>
+                        <a href="mailto:tintwaiyanmin.sg@gmail.com" class="contact-link">
+                            <span class="contact-link-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+                            tintwaiyanmin.sg@gmail.com
+                        </a>
+                        <a href="https://www.linkedin.com/in/tint-wai-yan-min-a689b430b/" class="contact-link" rel="noopener noreferrer" target="_blank">
+                            <span class="contact-link-icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></span>
+                            Tint Wai Yan Min — LinkedIn
+                        </a>
+                        <a href="https://github.com/tintwym" class="contact-link" rel="noopener noreferrer" target="_blank">
+                            <span class="contact-link-icon" aria-hidden="true"><i class="fab fa-github"></i></span>
+                            github.com/tintwym
+                        </a>
+                    </div>
+                </div>
+                <div class="card card-form">
+                    <form class="contact-form" id="contact-form" aria-label="Contact form">
+                        <div class="form-group">
+                            <label for="name">Your name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Role or project inquiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about the opportunity…" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary contact-submit">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
     <span class="footer-name">Tint Wai Yan Min</span>
-    <span>Designed &amp; built by Andrew · <span id="year"></span></span>
+    <span>Portfolio · <span id="year"></span></span>
     <span>All rights reserved</span>
 </footer>
 

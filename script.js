@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const skipLink = document.querySelector('.skip-link');
+    const mainEl = document.getElementById('main-content');
+    if (skipLink && mainEl) {
+        skipLink.addEventListener('click', () => {
+            window.setTimeout(() => {
+                try {
+                    mainEl.focus({ preventScroll: true });
+                } catch {
+                    mainEl.focus();
+                }
+            }, 0);
+        });
+    }
+
     const yearEl = document.getElementById('year');
     if (yearEl) {
         yearEl.textContent = String(new Date().getFullYear());
@@ -48,11 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     [
         'brand-home-link',
-        'work-link',
-        'skills-link',
-        'contact-link',
+        'nav-about',
+        'nav-experience',
+        'nav-education',
+        'nav-skills',
+        'nav-projects',
+        'nav-contact',
         'hire-link',
-        'portfolio-cta-link',
+        'hero-contact-link',
+        'hero-projects-link',
     ].forEach(wireSmoothLink);
 
     if (mobileMenu && navLinks) {
@@ -93,19 +111,16 @@ document.addEventListener('DOMContentLoaded', () => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
                     }
                 });
             },
-            { threshold: 0.08 }
+            { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
         );
 
-        document.querySelectorAll('.project-card, .skill-category, .resume-highlight').forEach((el) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    } else {
+        document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-visible'));
     }
 });
