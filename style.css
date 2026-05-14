@@ -530,6 +530,10 @@ body.nav-open { overflow: hidden; }
     gap: 1.25rem;
 }
 
+.card-education-span {
+    grid-column: 1 / -1;
+}
+
 .education-degree {
     font-family: var(--font-serif);
     font-size: 1.2rem;
@@ -573,6 +577,35 @@ body.nav-open { overflow: hidden; }
 
 .education-cv-link {
     margin-top: 1.15rem;
+}
+
+.cert-list {
+    list-style: none;
+    margin: 1rem 0 0.25rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: 0.5rem 1.25rem;
+}
+
+.cert-list li {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cert-list strong {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.cert-meta {
+    display: block;
+    font-size: 0.76rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    margin-top: 0.15rem;
 }
 
 /* Skills matrix */
@@ -641,6 +674,16 @@ body.nav-open { overflow: hidden; }
     max-width: 260px;
     height: auto;
     aspect-ratio: 690 / 390;
+}
+
+.project-visual--icon {
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    font-size: clamp(2.5rem, 8vw, 3.25rem);
+    opacity: 0.42;
 }
 
 .project-tag {
